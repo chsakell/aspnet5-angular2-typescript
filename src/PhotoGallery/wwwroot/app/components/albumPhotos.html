@@ -1,0 +1,60 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                {{_albumTitle}}
+                <small>Page {{_page + 1}} of {{_pagesCount}}</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a [routerLink]="['/Home']">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/Albums']">Albums</a>
+                </li>
+                <li>{{_albumTitle}}</li>
+                <li class="active">Photos</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-3 col-sm-6 hero-feature" *ngFor="#image of _photos">
+            <div class="thumbnail blue-thumb">
+                <a class="fancybox center-block" rel="gallery" href="{{image.Uri}}" title="{{image.Title}}">
+                    <img class="media-object center-block" height="120" src="{{image.Uri}}" alt="" />
+                </a>
+                <div class="row caption img-caption">
+                    <div class="row remove-caption">
+                        <div class="col-xs-10 dateCaption">{{convertDateTime(image.DateUploaded)}}</div>
+                        <div class="col-xs-2 buttonCaption">
+                            <button class="btn btn-xs btn-danger" (click)="delete(image)">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-remove fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <strong>{{image.Title}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar navbar-fixed-bottom">
+    <div class="text-center">
+        <div ng-hide="(!_pagesCount || _pagesCount < 2)" style="display:inline">
+            <ul class="pagination pagination-sm">
+                <li><a *ngIf="_page != 0_" (click)="search(0)"><<</a></li>
+                <li><a *ngIf="_page != 0" (click)="search(_page-1)"><</a></li>
+                <li *ngFor="#n of range()" [ngClass]="{active: n == _page}">
+                    <a (click)="search(n)" *ngIf="n != _page">{{n+1}}</a>
+                    <span *ngIf="n == _page">{{n+1}}</span>
+                </li>
+                <li><a *ngIf="_page != (_pagesCount - 1)" (click)="search(pagePlus(1))">></a></li>
+                <li><a *ngIf="_page != (_pagesCount - 1)" (click)="search(_pagesCount - 1)">>></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

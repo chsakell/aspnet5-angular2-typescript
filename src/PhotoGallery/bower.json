@@ -1,0 +1,9 @@
+{
+	"name": "ASP.NET",
+	"private": true,
+    "dependencies": {
+        "bootstrap": "3.3.6",
+        "components-font-awesome": "4.5.0",
+        "alertify.js": "0.3.11"
+    }
+}

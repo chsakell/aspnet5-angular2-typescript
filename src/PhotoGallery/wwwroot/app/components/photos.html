@@ -1,0 +1,43 @@
+﻿<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Photo Gallery photos
+                <small><i>(all albums displayed)</i></small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a [routerLink]="['/Home']">Home</a>
+                </li>
+                <li class="active">Photos</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-xs-6 picture-box" *ngFor="#image of _photos">
+            <a class="fancybox" rel="gallery" href="{{image.Uri}}">
+                <img src="{{image.Uri}}" alt="{{image.Title}}" class="img img-responsive full-width thumbnail" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar navbar-fixed-bottom">
+    <div class="text-center">
+        <div ng-hide="(!_pagesCount || _pagesCount < 2)" style="display:inline">
+            <ul class="pagination pagination-sm">
+                <li><a *ngIf="page != 0_" (click)="search(0)"><<</a></li>
+                <li><a *ngIf="_page != 0" (click)="search(_page-1)"><</a></li>
+                <li *ngFor="#n of range()" [ngClass]="{active: n == _page}">
+                    <a (click)="search(n)" *ngIf="n != _page">{{n+1}}</a>
+                    <span *ngIf="n == _page">{{n+1}}</span>
+                </li>
+                <li><a *ngIf="_page != (_pagesCount - 1)" (click)="search(pagePlus(1))">></a></li>
+                <li><a *ngIf="_page != (_pagesCount - 1)" (click)="search(_pagesCount - 1)">>></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+

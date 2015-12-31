@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @*<base href="/">*@
+
+    <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/css/font-awesome.css" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+
+    @*<script src="~/lib/js/system.js"></script>*@
+    @*<script src="~/lib/js/es6-shim.js"></script>*@
+
+    <script src="~/lib/js/angular2-polyfills.js"></script>
+    <script src="~/lib/js/system.src.js"></script>
+    <script src="~/lib/js/Rx.js"></script>
+    <script src="~/lib/js/angular2.dev.js"></script>
+
+    <script src="~/lib/js/jquery.js"></script>
+    <script src="~/lib/js/bootstrap.js"></script>
+
+    <script>
+        System.config({
+            map: {
+                'rxjs': 'lib/js/rxjs',
+                'angular2/angular2': '~/lib/js/angular2.dev.js',
+                'angular2/http': '~/lib/js/http.dev.js',
+                'angular2/router': '~/lib/js/router.dev.js'
+            },
+            packages: {
+                'app': { defaultExtension: 'js' },
+                'rxjs': { defaultExtension: 'js' }
+            },
+            defaultJSExtensions: true
+
+        });
+    </script>
+    <script src="~/lib/js/angular2.dev.js"></script>
+    <script src="~/lib/js/http.dev.js"></script>
+    <script src="~/lib/js/router.dev.js"></script>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        @RenderSection("customScript", required: false)
+    </script>
+</body>
+</html>
