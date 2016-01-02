@@ -5,10 +5,12 @@ import { Album } from '../core/domain/album';
 import { Paginated } from '../core/common/paginated';
 import { DataService } from '../core/services/dataService';
 import { UtilityService } from '../core/services/utilityService';
+import { NotificationService } from '../core/services/notificationService';
 import { Routes, APP_ROUTES } from '../routes';
 
 @Component({
     selector: 'albums',
+    providers: [NotificationService],
     templateUrl: './app/components/albums.html',
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })
@@ -19,6 +21,7 @@ export class Albums extends Paginated{
 
     constructor(public albumsService: DataService,
                 public utilityService: UtilityService,
+                public notificationService: NotificationService,
                 public router: Router) {
         super(0, 0, 0);
 
@@ -39,10 +42,9 @@ export class Albums extends Paginated{
             error => {
 
                 if (error.status == 401) {
+                    this.notificationService.printErrorMessage('Authentication required');
                     this.utilityService.navigateToSignIn();
                 }
-
-                console.error('Error: ' + error);
             });
     }
 
