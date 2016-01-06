@@ -53,7 +53,8 @@ namespace PhotoGallery.Controllers
                         _claims.Add(_claim);
                     }
                     await HttpContext.Authentication.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                        new ClaimsPrincipal(new ClaimsIdentity(_claims, CookieAuthenticationDefaults.AuthenticationScheme)));
+                        new ClaimsPrincipal(new ClaimsIdentity(_claims, CookieAuthenticationDefaults.AuthenticationScheme)),
+                        new Microsoft.AspNet.Http.Authentication.AuthenticationProperties {IsPersistent = user.RememberMe });
 
 
                     _authenticationResult = new GenericResult()

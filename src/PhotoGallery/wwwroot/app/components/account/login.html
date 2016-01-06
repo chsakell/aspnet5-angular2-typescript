@@ -32,6 +32,11 @@
                             <a [routerLink]="[routes.register.name]">Register</a>
                         </span>
                     </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" [(ngModel)]="_user.RememberMe"> Remember me
+                        </label>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
