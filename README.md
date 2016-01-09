@@ -67,7 +67,7 @@
 <li>dnu restore</li>
 </ul>
 </li>
-<li>Application uses SQL Server so in case you want to change this, you need to alter the corresponding parts (more info <a href="https://github.com/chsakell/aspnet5-angular2-typescript/issues/3" target="_blank">here</a>). Continue only if you have an instance of SQL Server available.</li>
+<li>Application uses SQL Server so in case you want to change this, you need to alter the corresponding parts (more info <a href="https://github.com/chsakell/aspnet5-angular2-typescript/issues/3" target="_blank">here</a>).</li>
 <li>Open <strong>appsettings.json</strong> file and alter the database connection string to reflect your SQL Server environment.</li>
 <li>Open a console/terminal and navigate to src/PhotoGallery where the project.json exists. Run the following commands to enable migrations and create the database:
 <ol>
