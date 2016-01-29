@@ -8,7 +8,7 @@ import { DataService } from '../core/services/dataService';
 @Component({
     selector: 'photos',
     providers: [DataService],
-    templateUrl: './app/components/Photos.html',
+    templateUrl: './app/components/photos.html',
     bindings: [DataService],
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })

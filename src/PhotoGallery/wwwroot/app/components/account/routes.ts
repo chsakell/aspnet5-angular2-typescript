@@ -1,7 +1,7 @@
 ﻿import { Route, Router } from 'angular2/router';
-import { Login } from './Login';
-import { Register } from './Register';
-import { Home } from '../../components/Home';
+import { Login } from './login';
+import { Register } from './register';
+import { Home } from '../../components/home';
 
 export var Routes = {
     login: new Route({ path: '/', name: 'Login', component: Login }),
