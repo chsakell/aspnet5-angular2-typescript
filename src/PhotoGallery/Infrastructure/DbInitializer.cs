@@ -58,7 +58,7 @@ namespace PhotoGallery.Infrastructure
 
                 _albums.Add(_album1); _albums.Add(_album2); _albums.Add(_album3); _albums.Add(_album4);
 
-                string[] _images = Directory.GetFiles(Path.Combine(imagesPath, "wwwroot\\images"));
+                string[] _images = Directory.GetFiles(Path.Combine(imagesPath, "wwwroot", "images"));
                 Random rnd = new Random();
 
                 foreach (string _image in _images)
