@@ -1,10 +1,10 @@
-<h2>Cross-platform Single Page Applications using ASP.NET 5, Angular 2 and Typescript</h2>
+<h2>Cross-platform Single Page Applications using ASP.NET Core, Angular 2 and Typescript</h2>
 
 <a href="http://wp.me/p3mRWu-11L" rel="attachment wp-att-3961" target="_blank"><img src="https://chsakell.files.wordpress.com/2015/12/aspnet5-agnular2-03.png?w=700&amp;h=355" alt="aspnet5-agnular2-03" width="700" height="355" class="alignnone size-full wp-image-3961"></a>
 
 <h3>Frameworks - Tools - Libraries</h3>
 <ul>
-<li>ASP.NET 5</li>
+<li>ASP.NET Core</li>
 <li>ASP.NET MVC 6</li>
 <li>Entity Framework 7</li>
 <li>Automapper</li>
@@ -17,7 +17,7 @@
 
 <h3>Installation instructions - Part 1 (Applied for Windows/Linux/MAC)</h3>
 <ol>
-<li>Install ASP.NET 5 according to your development environment from <a href="http://docs.asp.net/en/latest/getting-started/index.html" target="_blank">here</a>.</li>
+<li>Install ASP.NET Core according to your development environment from <a href="http://docs.asp.net/en/latest/getting-started/index.html" target="_blank">here</a>.</li>
 <li>Install <strong>NPM</strong> by installing <a href="https://nodejs.org/en/" target="_blank">Node.js</a>.</li>
 <li>Install Bower, Gulp, Typescript and Typescript Definition Manager globally by typing the following commands on the console/terminal:
 <ul>
@@ -31,7 +31,7 @@
 <h3>Installation instructions - Part 2 (Run application in Visual Studio 2015, only for Windows users)</h3>
 <ol>
 <li>Download and install Visual Studio 2015 from <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">here</a>.</li>
-<li>Open Visual Studio 2015 and install any update related to ASP.NET 5 (check the notifications).</li>
+<li>Open Visual Studio 2015 and install any update related to ASP.NET Core (check the notifications).</li>
 <li>Download the source code and open the solution.</li>
 <li>By the time you open the solution, VS 2015 will try to restore Nuget, NPM and Bower packages.</li>
 <li>In case it fails to restore NPM and Bower packages, open a console and navigate at the src/PhotoGallery path where the <i>package.json</i> and <i>bower.json</i> files exist. Run the following commands:
