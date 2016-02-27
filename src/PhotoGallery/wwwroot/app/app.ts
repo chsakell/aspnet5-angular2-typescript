@@ -1,4 +1,6 @@
-﻿import {provide, Component, View} from 'angular2/core';
+﻿///<reference path="../../node_modules/angular2/typings/browser.d.ts"/>
+
+import {provide, Component, View} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {bootstrap} from 'angular2/platform/browser';
 import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from 'angular2/http';
