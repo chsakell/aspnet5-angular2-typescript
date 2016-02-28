@@ -80,7 +80,7 @@ gulp.task('setup-vendors', function (done) {
 
 gulp.task('compile-typescript', function (done) {
     var tsResult = gulp.src([
-       "node_modules/angular2/bundles/typings/angular2/angular2.d.ts",
+       //"node_modules/angular2/bundles/typings/angular2/angular2.d.ts",
        "node_modules/angular2/bundles/typings/angular2/http.d.ts",
        "node_modules/angular2/bundles/typings/angular2/router.d.ts",
        //"node_modules/@reactivex/rxjs/dist/es6/Rx.d.ts",
