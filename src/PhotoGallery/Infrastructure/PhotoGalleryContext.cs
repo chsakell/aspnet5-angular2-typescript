@@ -20,6 +20,12 @@ namespace PhotoGallery.Infrastructure
         public PhotoGalleryContext(DbContextOptions options) : base(options)
         {
         }
+        
+        protected override void OnConfiguring(DbContextOptionsBuilder options)  
+        {  
+            options.UseInMemoryDatabase();  
+            base.OnConfiguring(options);  
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
