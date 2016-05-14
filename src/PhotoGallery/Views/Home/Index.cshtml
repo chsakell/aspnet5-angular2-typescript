@@ -26,8 +26,8 @@
 
 @section customScript
 {
-    System.import('./lib/spa/app.js').catch(console.log.bind(console));
+    System.import('app').catch(console.log.bind(console));
     $(document).ready(function() {
-    $('.fancybox').fancybox();
+        $('.fancybox').fancybox();
     });
 }
