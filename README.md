@@ -60,6 +60,7 @@
 <li>Open a console/terminal and navigate at the src/PhotoGallery path where the <i>package.json</i> and <i>bower.json</i> files exist. Run the following commands:
 <ul>
 <li>npm install</li>
+<li>typings install</li>
 <li>bower install</li>
 <li>gulp build-spa</li>
 </ul>
