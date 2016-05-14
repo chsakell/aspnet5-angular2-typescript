@@ -24,6 +24,7 @@
 <li>npm install -g bower</li>
 <li>npm install -g gulp</li>
 <li>npm install -g typescript</li>
+<li>npm install -g typings</li>
 <li>npm install -g tsd</li>
 </ul>
 </li>
@@ -37,6 +38,7 @@
 <li>In case it fails to restore NPM and Bower packages, open a console and navigate at the src/PhotoGallery path where the <i>package.json</i> and <i>bower.json</i> files exist. Run the following commands:
 <ul>
 <li>npm install</li>
+<li>typings install</li>
 <li>bower install</li>
 <li>gulp build-spa</li>
 </ul>
