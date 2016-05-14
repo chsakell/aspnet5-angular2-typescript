@@ -25,25 +25,12 @@ var tsProject = ts.createProject('./wwwroot/tsconfig.json');
 
 gulp.task('setup-vendors', function (done) {
     gulp.src([
-      'node_modules/angular2/bundles/js',
-      'node_modules/angular2/bundles/angular2.*.js*',
-      'node_modules/angular2/bundles/http.*.js*',
-      'node_modules/angular2/bundles/router.*.js*',
-      'node_modules/es6-shim/es6-shim.js*',
-      'node_modules/systemjs/dist/*.*',
       'node_modules/jquery/dist/jquery.*js',
       'bower_components/bootstrap/dist/js/bootstrap*.js',
       'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
       'bower_components/alertify.js/lib/alertify.min.js',
-      'node_modules/angular2/bundles/angular2-polyfills.js',
-      'node_modules/systemjs/dist/system.src.js',
-      'node_modules/rxjs/bundles/Rx.js',
-      'node_modules/angular2/bundles/angular2.dev.js'
+      'systemjs.config.js'
     ]).pipe(gulp.dest(paths.jsVendors));
-
-    gulp.src([
-       'node_modules/rxjs/**/*.js'
-    ]).pipe(gulp.dest(paths.jsRxJSVendors));
 
     gulp.src([
       'bower_components/bootstrap/dist/css/bootstrap.css',
@@ -80,10 +67,6 @@ gulp.task('setup-vendors', function (done) {
 
 gulp.task('compile-typescript', function (done) {
     var tsResult = gulp.src([
-       //"node_modules/angular2/bundles/typings/angular2/angular2.d.ts",
-       "node_modules/angular2/bundles/typings/angular2/http.d.ts",
-       "node_modules/angular2/bundles/typings/angular2/router.d.ts",
-       //"node_modules/@reactivex/rxjs/dist/es6/Rx.d.ts",
        "wwwroot/app/**/*.ts"
     ])
      .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());

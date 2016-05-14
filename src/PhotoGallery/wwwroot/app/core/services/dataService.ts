@@ -1,5 +1,6 @@
-﻿import { Http, Response, Request } from 'angular2/http';
-import { Injectable } from 'angular2/core';
+﻿import { Http, Response } from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
@@ -15,13 +16,6 @@ export class DataService {
         this._baseUri = baseUri;
         this._pageSize = pageSize;
     }
-
-    //get(page: number) {
-    //    var uri = this._baseUri + page.toString() + '/' + this._pageSize.toString();
-
-    //    return this.http.get(uri)
-    //        .map(response => <any>(<Response>response).json());
-    //}
 
     get(page: number) {
         var uri = this._baseUri + page.toString() + '/' + this._pageSize.toString();

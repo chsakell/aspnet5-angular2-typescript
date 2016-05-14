@@ -1,6 +1,6 @@
-﻿import {Component} from 'angular2/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
-import {Router, RouterLink} from 'angular2/router';
+﻿import {Component} from '@angular/core';
+import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
+import {Router, RouterLink} from '@angular/router-deprecated';
 import { Routes, APP_ROUTES } from './routes';
 import { User } from '../../core/domain/user';
 import { OperationResult } from '../../core/domain/operationResult';

@@ -13,33 +13,26 @@
     @RenderSection("styles", required: false)
 
     @*Solve IE 11 issues *@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
-    <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>*@
 
-    <script src="~/lib/js/angular2-polyfills.js"></script>
-    <script src="~/lib/js/system.src.js"></script>
-    <script src="~/lib/js/Rx.js"></script>
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="~/lib/js/systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
 
     <script src="~/lib/js/jquery.js"></script>
     <script src="~/lib/js/bootstrap.js"></script>
-
-    <script>
-        System.config({
-            map: {
-                'rxjs': 'lib/js/rxjs'
-            },
-            packages: {
-                'app': { defaultExtension: 'js' },
-                'rxjs': { defaultExtension: 'js' }
-            },
-            defaultJSExtensions: true
-
-        });
-    </script>
-    <script src="~/lib/js/angular2.dev.js"></script>
-    <script src="~/lib/js/http.dev.js"></script>
-    <script src="~/lib/js/router.dev.js"></script>
 </head>
 <body>
     <div>

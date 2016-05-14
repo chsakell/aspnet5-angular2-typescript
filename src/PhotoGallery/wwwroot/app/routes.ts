@@ -1,4 +1,4 @@
-﻿import { Route, Router } from 'angular2/router';
+﻿import { Route, Router } from '@angular/router-deprecated';
 import { Home } from './components/home';
 import { Photos } from './components/photos';
 import { Albums } from './components/albums';

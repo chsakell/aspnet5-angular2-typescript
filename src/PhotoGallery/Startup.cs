@@ -15,6 +15,9 @@ using PhotoGallery.Infrastructure.Services;
 using PhotoGallery.Infrastructure.Mappings;
 using PhotoGallery.Infrastructure.Core;
 using System.Security.Claims;
+using Microsoft.AspNet.StaticFiles;
+using Microsoft.AspNet.FileProviders;
+using System.IO;
 
 namespace PhotoGallery
 {
@@ -88,7 +91,20 @@ namespace PhotoGallery
             app.UseIISPlatformHandler();
 
             // Add static files to the request pipeline.
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
+
+            // this will serve up wwwroot
+            app.UseFileServer();
+
+            // this will serve up node_modules
+            var provider = new PhysicalFileProvider(
+                Path.Combine(_applicationPath, "node_modules")
+            );
+            var _fileServerOptions = new FileServerOptions();
+            _fileServerOptions.RequestPath = "/node_modules";
+            _fileServerOptions.StaticFileOptions.FileProvider = provider;
+            _fileServerOptions.EnableDirectoryBrowsing = true;
+            app.UseFileServer(_fileServerOptions);
 
             AutoMapperConfiguration.Configure();
 

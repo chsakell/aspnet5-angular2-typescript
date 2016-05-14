@@ -1,4 +1,4 @@
-﻿import { Route, Router } from 'angular2/router';
+﻿import { Route, Router } from '@angular/router-deprecated';
 import { Login } from './login';
 import { Register } from './register';
 import { Home } from '../../components/home';

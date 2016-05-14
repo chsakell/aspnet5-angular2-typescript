@@ -1,14 +1,14 @@
-﻿///<reference path="../../node_modules/angular2/typings/browser.d.ts"/>
+﻿///<reference path="../../typings/browser.d.ts" />
 
-import {provide, Component} from 'angular2/core';
-import {CORE_DIRECTIVES} from 'angular2/common';
-import {bootstrap} from 'angular2/platform/browser';
-import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from 'angular2/http';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ROUTER_BINDINGS } from 'angular2/router';
- // Angular 2 Beta 16 https://github.com/angular/angular/commit/b602bd8c835ef33f9d0c44e2595558471462fec5
-import { Location, LocationStrategy, HashLocationStrategy } from 'angular2/platform/common';
+import {provide, Component} from '@angular/core';
+import {CORE_DIRECTIVES} from '@angular/common';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from '@angular/http';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ROUTER_BINDINGS } from '@angular/router-deprecated';
+import { Location, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import 'rxjs/add/operator/map';
-import {enableProdMode} from 'angular2/core';
+import {enableProdMode} from '@angular/core';
+import 'rxjs/Rx';   // Load all features
 
 enableProdMode();
 import { Routes, APP_ROUTES } from './routes';
