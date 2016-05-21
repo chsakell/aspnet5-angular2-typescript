@@ -1,6 +1,6 @@
 <h2>Cross-platform Single Page Applications using ASP.NET Core, Angular 2 and Typescript</h2>
 
-<a href="http://wp.me/p3mRWu-11L" rel="attachment wp-att-3961" target="_blank"><img src="https://chsakell.files.wordpress.com/2015/12/aspnet5-agnular2-03.png?w=700&amp;h=355" alt="aspnet5-agnular2-03" width="700" height="355" class="alignnone size-full wp-image-3961"></a>
+<a href="http://wp.me/p3mRWu-11L" rel="attachment wp-att-3961" target="_blank"><img src="https://chsakell.files.wordpress.com/2016/05/aspcorerc2.png?w=700&amp;h=355" alt="aspnet5-agnular2-03" width="700" height="355" class="alignnone size-full wp-image-3961"></a>
 
 <h3>Frameworks - Tools - Libraries</h3>
 <ul>
@@ -17,7 +17,7 @@
 
 <h3>Installation instructions - Part 1 (Applied for Windows/Linux/MAC)</h3>
 <ol>
-<li>Install ASP.NET Core according to your development environment from <a href="http://docs.asp.net/en/latest/getting-started/index.html" target="_blank">here</a>.</li>
+<li>Install ASP.NET Core according to your development environment from <a href="https://www.microsoft.com/net/core" target="_blank">here</a>.</li>
 <li>Install <strong>NPM</strong> by installing <a href="https://nodejs.org/en/" target="_blank">Node.js</a>.</li>
 <li>Install Bower, Gulp, Typescript and Typescript Definition Manager globally by typing the following commands on the console/terminal:
 <ul>
@@ -46,8 +46,8 @@
 <li>Open <strong>appsettings.json</strong> file and alter the database connection string to reflect your SQL Server environment.</li>
 <li>Open a console and navigate to src/PhotoGallery where the project.json exists. Run the following commands to enable migrations and create the database:
 <ol>
-<li>dnx ef migrations add initial</li>
-<li>dnx ef database update</li>
+<li>dotnet ef migrations add initial</li>
+<li>dotnet ef database update</li>
 </ol>
 </li>
 <li>Build your application and run it. You can use <i>username:</i> <strong>chsakell</strong> and <i>password:</i> <strong>photogallery</strong> to sign in or register a new user.</li>
@@ -56,6 +56,7 @@
 <h3>Installation instructions - Part 2 (Run application in Visual Studio Code, recommended for Linux/MAC users)</h3>
 <ol>
 <li>Download and install Visual Studio Code from <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">here</a>.</li>
+<li>Install the csharp extension from <a href="https://code.visualstudio.com/Docs/languages/csharp" target="_blank">here</a></li>
 <li>Download the source code and open the src/PhotoGallery folder in Visual Studio Code.</li>
 <li>Open a console/terminal and navigate at the src/PhotoGallery path where the <i>package.json</i> and <i>bower.json</i> files exist. Run the following commands:
 <ul>
@@ -65,22 +66,22 @@
 <li>gulp build-spa</li>
 </ul>
 </li>
-<li>Run the following command to restore Nuget Packages:
+<li>Run the following command to restore Nuget Packages (dependencies)
 <ul>
-<li>dnu restore</li>
+<li>dotnet restore</li>
 </ul>
 </li>
 <li>Application uses SQL Server so in case you want to change this, you need to alter the corresponding parts (more info <a href="https://github.com/chsakell/aspnet5-angular2-typescript/issues/3" target="_blank">here</a>).</li>
 <li>Open <strong>appsettings.json</strong> file and alter the database connection string to reflect your SQL Server environment.</li>
 <li>Open a console/terminal and navigate to src/PhotoGallery where the project.json exists. Run the following commands to enable migrations and create the database:
 <ol>
-<li>dnx ef migrations add initial</li>
-<li>dnx ef database update</li>
+<li>dotnet ef migrations add initial</li>
+<li>dotnet ef database update</li>
 </ol>
 </li>
 <li>Host your application using <strong>Kestrel</strong> by typing the following command while at src/PhotoGallery:
 <ul>
-<li>dnx web</li>
+<li>dotnet run</li>
 </ul>
 </li>
 <li>Open a browser and navigate to http://localhost:5000/</li>
