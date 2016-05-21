@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PhotoGallery.Infrastructure.Services;
 using PhotoGallery.Infrastructure.Repositories;
 using PhotoGallery.Entities;
@@ -10,7 +10,7 @@ using PhotoGallery.ViewModels;
 using PhotoGallery.Infrastructure.Core;
 using PhotoGallery.Infrastructure;
 using System.Security.Claims;
-using Microsoft.AspNet.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -54,7 +54,7 @@ namespace PhotoGallery.Controllers
                     }
                     await HttpContext.Authentication.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                         new ClaimsPrincipal(new ClaimsIdentity(_claims, CookieAuthenticationDefaults.AuthenticationScheme)),
-                        new Microsoft.AspNet.Http.Authentication.AuthenticationProperties {IsPersistent = user.RememberMe });
+                        new Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties {IsPersistent = user.RememberMe });
 
 
                     _authenticationResult = new GenericResult()
@@ -101,7 +101,7 @@ namespace PhotoGallery.Controllers
                 _loggingRepository.Add(new Error() { Message = ex.Message, StackTrace = ex.StackTrace, DateCreated = DateTime.Now });
                 _loggingRepository.Commit();
 
-                return HttpBadRequest();
+                return BadRequest();
             }
 
         }

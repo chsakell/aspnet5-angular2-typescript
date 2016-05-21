@@ -41,7 +41,7 @@ export class Albums extends Paginated{
             },
             error => {
 
-                if (error.status == 401) {
+                if (error.status == 401 || error.status == 404) {
                     this.notificationService.printErrorMessage('Authentication required');
                     this.utilityService.navigateToSignIn();
                 }

@@ -1,10 +1,11 @@
-﻿using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Infrastructure;
+﻿using Microsoft.EntityFrameworkCore;
 using PhotoGallery.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace PhotoGallery.Infrastructure
 {
@@ -23,6 +24,11 @@ namespace PhotoGallery.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            foreach (var entity in modelBuilder.Model.GetEntityTypes())
+            {
+                entity.Relational().TableName = entity.DisplayName();
+            }
+
             // Photos
             modelBuilder.Entity<Photo>().Property(p => p.Title).HasMaxLength(100);
             modelBuilder.Entity<Photo>().Property(p => p.AlbumId).IsRequired();

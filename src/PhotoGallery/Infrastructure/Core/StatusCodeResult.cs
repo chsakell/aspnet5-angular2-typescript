@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PhotoGallery.Infrastructure.Core
 {
-    public class StatusCodeResult
+    public class CodeResultStatus
     {
         private int _status;
         private string _message;
@@ -25,7 +25,7 @@ namespace PhotoGallery.Infrastructure.Core
             private set { }
         }
 
-        public StatusCodeResult(int status)
+        public CodeResultStatus(int status)
         {
             if (status == 401)
                 _message = "Unauthorized access. Login required";
@@ -33,7 +33,7 @@ namespace PhotoGallery.Infrastructure.Core
             _status = status;
         }
 
-        public StatusCodeResult(int code, string message)
+        public CodeResultStatus(int code, string message)
         {
             _status = code;
             _message = message;

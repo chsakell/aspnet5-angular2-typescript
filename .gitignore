@@ -216,3 +216,4 @@ ModelManifest.xml
 /src/PhotoGallery/wwwroot/app/**/*.js
 /src/PhotoGallery/wwwroot/app/**/*.js.map
 /src/PhotoGallery/typings
+/src/PhotoGallery/migrations

@@ -51,7 +51,8 @@ export class AlbumPhotos extends Paginated {
                 this._albumTitle = this._photos[0].AlbumTitle;
             },
             error => {
-                if (error.status == 401) {
+
+                if (error.status == 401 || error.status == 302) {
                     this.utilityService.navigateToSignIn();
                 }
 

@@ -1,10 +1,9 @@
-﻿using Microsoft.Data.Entity.Storage;
+﻿using Microsoft.EntityFrameworkCore;
 using PhotoGallery.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Framework.DependencyInjection;
 using System.IO;
 
 namespace PhotoGallery.Infrastructure
@@ -14,7 +13,7 @@ namespace PhotoGallery.Infrastructure
         private static PhotoGalleryContext context;
         public static void Initialize(IServiceProvider serviceProvider, string imagesPath)
         {
-            context = (PhotoGalleryContext)serviceProvider.GetService<PhotoGalleryContext>();
+            context = (PhotoGalleryContext)serviceProvider.GetService(typeof(PhotoGalleryContext));
 
             InitializePhotoAlbums(imagesPath);
             InitializeUserRoles();
@@ -58,7 +57,7 @@ namespace PhotoGallery.Infrastructure
 
                 _albums.Add(_album1); _albums.Add(_album2); _albums.Add(_album3); _albums.Add(_album4);
 
-                string[] _images = Directory.GetFiles(Path.Combine(imagesPath, "wwwroot", "images"));
+                string[] _images = Directory.GetFiles(Path.Combine(imagesPath, "images"));
                 Random rnd = new Random();
 
                 foreach (string _image in _images)

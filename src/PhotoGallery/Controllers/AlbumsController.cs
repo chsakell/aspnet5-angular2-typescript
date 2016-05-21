@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PhotoGallery.Entities;
 using PhotoGallery.ViewModels;
 using AutoMapper;
 using PhotoGallery.Infrastructure.Repositories;
 using PhotoGallery.Infrastructure.Core;
-using Microsoft.AspNet.Authorization;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -67,7 +67,7 @@ namespace PhotoGallery.Controllers
                 }
                 else
                 {
-                    StatusCodeResult _codeResult = new StatusCodeResult(401);
+                    CodeResultStatus _codeResult = new CodeResultStatus(401);
                     return new ObjectResult(_codeResult);
                 }
             }

@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 using PhotoGallery.Entities;
 using System;
 using System.Collections.Generic;
