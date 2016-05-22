@@ -25,9 +25,9 @@ namespace PhotoGallery
     {
         private static string _applicationPath = string.Empty;
         private static string _contentRootPath = string.Empty;
-        public Startup(IHostingEnvironment env, IHostingEnvironment appEnv)
+        public Startup(IHostingEnvironment env)
         {
-            _applicationPath = appEnv.WebRootPath;
+            _applicationPath = env.WebRootPath;
             _contentRootPath = env.ContentRootPath;
             // Setup configuration sources.
 
