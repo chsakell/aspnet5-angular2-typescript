@@ -1,6 +1,6 @@
-﻿import {Component} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
-import {Router, RouterLink} from '@angular/router-deprecated'
+﻿import { Component, OnInit } from '@angular/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
+import { Router, RouterLink } from '@angular/router-deprecated'
 import { Photo } from '../core/domain/photo';
 import { Paginated } from '../core/common/paginated';
 import { DataService } from '../core/services/dataService';
@@ -12,14 +12,16 @@ import { DataService } from '../core/services/dataService';
     bindings: [DataService],
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })
-export class Photos extends Paginated {
+export class Photos extends Paginated implements OnInit {
     private _photosAPI: string = 'api/photos/';
     private _photos: Array<Photo>;
 
     constructor(public photosService: DataService) {
         super(0, 0, 0);
+    }
 
-        photosService.set(this._photosAPI, 12);
+    ngOnInit() {
+        this.photosService.set(this._photosAPI, 12);
         this.getPhotos();
     }
 

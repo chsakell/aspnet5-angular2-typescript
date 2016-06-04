@@ -1,6 +1,6 @@
-﻿import {Component} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
-import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, Router} from '@angular/router-deprecated'
+﻿import { Component, OnInit} from '@angular/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
+import { ROUTER_PROVIDERS, ROUTER_DIRECTIVES, Router } from '@angular/router-deprecated'
 import { Routes, APP_ROUTES } from './routes';
 import { Registration } from '../../core/domain/registration'
 import { OperationResult } from '../../core/domain/operationResult'
@@ -14,17 +14,17 @@ import { NotificationService } from '../../core/services/notificationService';
     bindings: [MembershipService, NotificationService],
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES]
 })
-export class Register {
+export class Register implements OnInit {
 
     private routes = Routes;
-    private _router: Router;
     private _newUser: Registration;
 
     constructor(public membershipService: MembershipService,
                 public notificationService: NotificationService,
-                router: Router) {
+                public router: Router) { }
+
+    ngOnInit() {
         this._newUser = new Registration('', '', '');
-        this._router = router;
         this.routes = Routes;
     }
 
@@ -40,7 +40,7 @@ export class Register {
             () => {
                 if (_registrationResult.Succeeded) {
                     this.notificationService.printSuccessMessage('Dear ' + this._newUser.Username + ', please login with your credentials');
-                    this._router.navigate([this.routes.login.name]);
+                    this.router.navigate([this.routes.login.name]);
                 }
                 else {
                     this.notificationService.printErrorMessage(_registrationResult.Message);

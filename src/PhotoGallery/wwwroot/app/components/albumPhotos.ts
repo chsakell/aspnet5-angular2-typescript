@@ -1,6 +1,6 @@
-﻿import {Component} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
-import {RouterLink, RouteParams} from '@angular/router-deprecated'
+﻿import { Component, OnInit } from '@angular/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
+import { RouterLink, RouteParams } from '@angular/router-deprecated'
 import { Photo } from '../core/domain/photo';
 import { Paginated } from '../core/common/paginated';
 import { DataService } from '../core/services/dataService';
@@ -15,25 +15,25 @@ import { OperationResult } from '../core/domain/operationResult';
     bindings: [NotificationService],
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })
-export class AlbumPhotos extends Paginated {
+export class AlbumPhotos extends Paginated implements OnInit {
     private _albumsAPI: string = 'api/albums/';
     private _photosAPI: string = 'api/photos/';
     private _albumId: string;
     private _photos: Array<Photo>;
     private _displayingTotal: number;
-    private _routeParam: RouteParams;
     private _albumTitle: string;
 
     constructor(public dataService: DataService,
-        public utilityService: UtilityService,
-        public notificationService: NotificationService,
-        routeParam: RouteParams) {
-        super(0, 0, 0);
+                public utilityService: UtilityService,
+                public notificationService: NotificationService,
+                public routeParam: RouteParams) {
+                super(0, 0, 0);
+    }
 
-        this._routeParam = routeParam;
-        this._albumId = this._routeParam.get('id');
+    ngOnInit() {
+        this._albumId = this.routeParam.get('id');
         this._albumsAPI += this._albumId + '/photos/';
-        dataService.set(this._albumsAPI, 12);
+        this.dataService.set(this._albumsAPI, 12);
         this.getAlbumPhotos();
     }
 

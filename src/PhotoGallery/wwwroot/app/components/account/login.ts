@@ -1,6 +1,6 @@
-﻿import {Component} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
-import {Router, RouterLink} from '@angular/router-deprecated';
+﻿import { Component, OnInit } from '@angular/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
+import { Router, RouterLink } from '@angular/router-deprecated';
 import { Routes, APP_ROUTES } from './routes';
 import { User } from '../../core/domain/user';
 import { OperationResult } from '../../core/domain/operationResult';
@@ -14,17 +14,17 @@ import { NotificationService } from '../../core/services/notificationService';
     bindings: [MembershipService, NotificationService],
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })
-export class Login {
+export class Login implements OnInit {
     private routes = Routes;
-    private _router: Router;
     private _user: User;
 
     constructor(public membershipService: MembershipService,
                 public notificationService: NotificationService,
-                router: Router) {
+                public router: Router) { }
+
+    ngOnInit() {
         this._user = new User('', '');
         this.routes = Routes;
-        this._router = router;
     }
 
     login(): void {
@@ -40,7 +40,7 @@ export class Login {
                 if (_authenticationResult.Succeeded) {
                     this.notificationService.printSuccessMessage('Welcome back ' + this._user.Username + '!');
                     localStorage.setItem('user', JSON.stringify(this._user));
-                    this._router.navigate([this.routes.home.name]);
+                    this.router.navigate([this.routes.home.name]);
                 }
                 else {
                     this.notificationService.printErrorMessage(_authenticationResult.Message);

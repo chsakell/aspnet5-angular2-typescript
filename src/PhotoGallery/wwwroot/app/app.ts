@@ -1,6 +1,6 @@
 ﻿///<reference path="../../typings/browser.d.ts" />
 
-import {provide, Component} from '@angular/core';
+import {provide, Component, OnInit } from '@angular/core';
 import {CORE_DIRECTIVES} from '@angular/common';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from '@angular/http';
@@ -23,12 +23,15 @@ import { User } from './core/domain/user';
     directives: [ROUTER_DIRECTIVES, CORE_DIRECTIVES]
 })
 @RouteConfig(APP_ROUTES)
-export class AppRoot {
+export class AppRoot implements OnInit {
     private routes = Routes;
 
-    constructor(public membershipService: MembershipService, location: Location) {
+    constructor(public membershipService: MembershipService,
+                public location: Location) { }
+
+    ngOnInit() {
         this.routes = Routes;
-        location.go('/');
+        this.location.go('/');
     }
 
     isUserLoggedIn(): boolean {

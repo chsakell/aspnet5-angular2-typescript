@@ -1,6 +1,6 @@
-﻿import {Component} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
-import {Router, RouterLink} from '@angular/router-deprecated'
+﻿import { Component, OnInit } from '@angular/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
+import { Router, RouterLink } from '@angular/router-deprecated'
 import { Album } from '../core/domain/album';
 import { Paginated } from '../core/common/paginated';
 import { DataService } from '../core/services/dataService';
@@ -14,7 +14,7 @@ import { Routes, APP_ROUTES } from '../routes';
     templateUrl: './app/components/albums.html',
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })
-export class Albums extends Paginated{
+export class Albums extends Paginated implements OnInit {
     private _albumsAPI: string = 'api/albums/';
     private _albums: Array<Album>;
     private routes = Routes;
@@ -24,9 +24,11 @@ export class Albums extends Paginated{
                 public notificationService: NotificationService,
                 public router: Router) {
         super(0, 0, 0);
+    }
 
+    ngOnInit() {
         this.routes = Routes;
-        albumsService.set(this._albumsAPI, 3);
+        this.albumsService.set(this._albumsAPI, 3);
         this.getAlbums();
     }
 
