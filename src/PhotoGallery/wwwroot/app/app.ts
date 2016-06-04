@@ -8,7 +8,6 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ROUTER_BINDINGS } fro
 import { Location, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import 'rxjs/add/operator/map';
 import {enableProdMode} from '@angular/core';
-import 'rxjs/Rx';   // Load all features
 
 enableProdMode();
 import { Routes, APP_ROUTES } from './routes';
