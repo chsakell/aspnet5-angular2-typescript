@@ -31,5 +31,8 @@
         "merge": "1.2.0",
         "typescript": "^1.8.10",
         "typings": "^0.8.1"
+    },
+    "scripts": {
+        "postinstall": "typings install"
     }
 }
