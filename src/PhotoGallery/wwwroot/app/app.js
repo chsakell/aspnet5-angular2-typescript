@@ -22,7 +22,6 @@ var router_deprecated_1 = require('@angular/router-deprecated');
 var common_2 = require('@angular/common');
 require('rxjs/add/operator/map');
 var core_2 = require('@angular/core');
-require('rxjs/Rx'); // Load all features
 core_2.enableProdMode();
 var routes_1 = require('./routes');
 var dataService_1 = require('./core/services/dataService');
@@ -31,10 +30,13 @@ var utilityService_1 = require('./core/services/utilityService');
 var AppRoot = (function () {
     function AppRoot(membershipService, location) {
         this.membershipService = membershipService;
+        this.location = location;
         this.routes = routes_1.Routes;
-        this.routes = routes_1.Routes;
-        location.go('/');
     }
+    AppRoot.prototype.ngOnInit = function () {
+        this.routes = routes_1.Routes;
+        this.location.go('/');
+    };
     AppRoot.prototype.isUserLoggedIn = function () {
         return this.membershipService.isUserAuthenticated();
     };

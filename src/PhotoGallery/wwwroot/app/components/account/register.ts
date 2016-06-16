@@ -11,8 +11,7 @@ import { NotificationService } from '../../core/services/notificationService';
     selector: 'register',
     providers: [MembershipService, NotificationService],
     templateUrl: './app/components/account/register.html',
-    bindings: [MembershipService, NotificationService],
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES]
 })
 export class Register implements OnInit {
 

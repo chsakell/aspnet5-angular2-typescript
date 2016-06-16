@@ -9,8 +9,7 @@ import { DataService } from '../core/services/dataService';
     selector: 'photos',
     providers: [DataService],
     templateUrl: './app/components/photos.html',
-    bindings: [DataService],
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
+    directives: [RouterLink]
 })
 export class Photos extends Paginated implements OnInit {
     private _photosAPI: string = 'api/photos/';

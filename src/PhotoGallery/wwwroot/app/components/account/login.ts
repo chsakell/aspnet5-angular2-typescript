@@ -11,7 +11,6 @@ import { NotificationService } from '../../core/services/notificationService';
     selector: 'albums',
     providers: [MembershipService, NotificationService],
     templateUrl: './app/components/account/login.html',
-    bindings: [MembershipService, NotificationService],
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
 })
 export class Login implements OnInit {

@@ -12,8 +12,7 @@ import { OperationResult } from '../core/domain/operationResult';
     selector: 'album-photo',
     providers: [NotificationService],
     templateUrl: './app/components/albumPhotos.html',
-    bindings: [NotificationService],
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
+    directives: [RouterLink]
 })
 export class AlbumPhotos extends Paginated implements OnInit {
     private _albumsAPI: string = 'api/albums/';
