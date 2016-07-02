@@ -18,6 +18,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.StaticFiles;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json.Serialization;
 
 namespace PhotoGallery
 {
@@ -81,7 +82,16 @@ namespace PhotoGallery
             });
 
             // Add MVC services to the services container.
-            services.AddMvc();
+            services.AddMvc()
+            .AddJsonOptions(opt =>
+            {
+                var resolver = opt.SerializerSettings.ContractResolver;
+                if (resolver != null)
+                {
+                    var res = resolver as DefaultContractResolver;
+                    res.NamingStrategy = null;
+                }
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -118,9 +128,9 @@ namespace PhotoGallery
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
 
-                    // Uncomment the following line to add a route for porting Web API 2 controllers.
-                    //routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
-                });
+                // Uncomment the following line to add a route for porting Web API 2 controllers.
+                //routes.MapWebApiRoute("DefaultApi", "api/{controller}/{id?}");
+            });
 
             DbInitializer.Initialize(app.ApplicationServices, _applicationPath);
         }
