@@ -1,4 +1,4 @@
-///<reference path="../../typings/browser.d.ts" />
+/// <reference path="../../typings/globals/es6-shim/index.d.ts" />
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
