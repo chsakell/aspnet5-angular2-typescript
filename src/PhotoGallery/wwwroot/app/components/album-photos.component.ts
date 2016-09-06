@@ -11,9 +11,9 @@ import { Subscription }  from 'rxjs/Subscription';
 @Component({
     selector: 'album-photo',
     providers: [NotificationService],
-    templateUrl: './app/components/albumPhotos.html'
+    templateUrl: './app/components/album-photos.component.html'
 })
-export class AlbumPhotos extends Paginated implements OnInit {
+export class AlbumPhotosComponent extends Paginated implements OnInit {
     private _albumsAPI: string = 'api/albums/';
     private _photosAPI: string = 'api/photos/';
     private _albumId: string;

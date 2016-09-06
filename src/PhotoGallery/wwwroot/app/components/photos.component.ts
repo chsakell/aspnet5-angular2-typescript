@@ -5,9 +5,9 @@ import { DataService } from '../core/services/dataService';
 
 @Component({
     selector: 'photos',
-    templateUrl: './app/components/photos.html'
+    templateUrl: './app/components/photos.component.html'
 })
-export class Photos extends Paginated implements OnInit {
+export class PhotosComponent extends Paginated implements OnInit {
     private _photosAPI: string = 'api/photos/';
     private _photos: Array<Photo>;
 

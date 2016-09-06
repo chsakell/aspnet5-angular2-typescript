@@ -6,11 +6,11 @@ import { Location, LocationStrategy, HashLocationStrategy } from '@angular/commo
 import { Headers, RequestOptions, BaseRequestOptions} from '@angular/http';
 
 import { AccountModule } from './components/account/account.module';
-import { AppRoot }  from './app';
-import { AlbumPhotos } from './components/albumPhotos';
-import { Home } from './components/home';
-import { Photos } from './components/photos';
-import { Albums } from './components/albums';
+import { AppComponent }  from './app.component';
+import { AlbumPhotosComponent } from './components/album-photos.component';
+import { HomeComponent } from './components/home.component';
+import { PhotosComponent } from './components/photos.component';
+import { AlbumsComponent } from './components/albums.component';
 import { routing } from './routes';
 
 import { DataService } from './core/services/dataService';
@@ -36,11 +36,11 @@ class AppBaseRequestOptions extends BaseRequestOptions {
         routing,
         AccountModule
     ],
-    declarations: [AppRoot, AlbumPhotos, Home, Photos, Albums],
+    declarations: [AppComponent, AlbumPhotosComponent, HomeComponent, PhotosComponent, AlbumsComponent],
     providers: [DataService, MembershipService, UtilityService, NotificationService,
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         { provide: RequestOptions, useClass: AppBaseRequestOptions }],
-    bootstrap: [AppRoot]
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
 

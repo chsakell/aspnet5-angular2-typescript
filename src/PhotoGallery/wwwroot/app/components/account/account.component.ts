@@ -2,10 +2,10 @@
 
 @Component({
     selector: 'account',
-    templateUrl: './app/components/account/account.html'
+    templateUrl: './app/components/account/account.component.html'
 })
 
-export class Account {
+export class AccountComponent {
     constructor() {
 
     }

@@ -1,19 +1,17 @@
 ﻿import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Account } from './account';
-import { Login } from './login';
-import { Register } from './register';
-import { Home } from '../../components/home';
-
+import { AccountComponent } from './account.component';
+import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 
 export const accountRoutes: Routes = [
     {
         path: 'account',
-        component: Account,
+        component: AccountComponent,
         children: [
-            { path: 'register', component: Register },
-            { path: 'login', component: Login }
+            { path: 'register', component: RegisterComponent },
+            { path: 'login', component: LoginComponent }
         ]
     }
 ];

@@ -7,9 +7,9 @@ import { NotificationService } from '../core/services/notificationService';
 
 @Component({
     selector: 'albums',
-    templateUrl: './app/components/albums.html'
+    templateUrl: './app/components/albums.component.html'
 })
-export class Albums extends Paginated implements OnInit {
+export class AlbumsComponent extends Paginated implements OnInit {
     private _albumsAPI: string = 'api/albums/';
     private _albums: Array<Album>;
 

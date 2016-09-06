@@ -1,10 +1,10 @@
 ﻿import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Home } from './components/home';
-import { Photos } from './components/photos';
-import { Albums } from './components/albums';
-import { AlbumPhotos } from './components/albumPhotos';
+import { HomeComponent } from './components/home.component';
+import { PhotosComponent } from './components/photos.component';
+import { AlbumsComponent } from './components/albums.component';
+import { AlbumPhotosComponent } from './components/album-photos.component';
 import { accountRoutes, accountRouting } from './components/account/routes';
 
 
@@ -16,30 +16,20 @@ const appRoutes: Routes = [
     },
     {
         path: 'home',
-        component: Home
+        component: HomeComponent
     },
     {
         path: 'photos',
-        component: Photos
+        component: PhotosComponent
     },
     {
         path: 'albums',
-        component: Albums
+        component: AlbumsComponent
     },
     {
         path: 'albums/:id/photos',
-        component: AlbumPhotos
+        component: AlbumPhotosComponent
     }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
-
-//const appRoutes: Routes = [
-//    home: new Route({ path: '/', name: 'Home', component: Home }),
-//    photos: new Route({ path: '/photos', name: 'Photos', component: Photos }),
-//    albums: new Route({ path: '/albums', name: 'Albums', component: Albums }),
-//    albumPhotos: new Route({ path: '/albums/:id/photos', name: 'AlbumPhotos', component: AlbumPhotos }),
-//    account: new Route({ path: '/account/...', name: 'Account', component: Account })
-//];
-
-//export const APP_ROUTES = Object.keys(Routes).map(r => Routes[r]);

@@ -7,9 +7,9 @@ import { NotificationService } from '../../core/services/notificationService';
 
 @Component({
     selector: 'albums',
-    templateUrl: './app/components/account/login.html'
+    templateUrl: './app/components/account/login.component.html'
 })
-export class Login implements OnInit {
+export class LoginComponent implements OnInit {
     private _user: User;
 
     constructor(public membershipService: MembershipService,

@@ -8,9 +8,9 @@ import { NotificationService } from '../../core/services/notificationService';
 @Component({
     selector: 'register',
     providers: [MembershipService, NotificationService],
-    templateUrl: './app/components/account/register.html'
+    templateUrl: './app/components/account/register.component.html'
 })
-export class Register implements OnInit {
+export class RegisterComponent implements OnInit {
 
     private _newUser: Registration;
 

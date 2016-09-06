@@ -11,9 +11,9 @@ import { User } from './core/domain/user';
 
 @Component({
     selector: 'photogallery-app',
-    templateUrl: './app/app.html'
+    templateUrl: './app/app.component.html'
 })
-export class AppRoot implements OnInit {
+export class AppComponent implements OnInit {
 
     constructor(public membershipService: MembershipService,
                 public location: Location) { }
