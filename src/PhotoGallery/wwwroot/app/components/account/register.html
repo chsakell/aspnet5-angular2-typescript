@@ -11,36 +11,36 @@
                 </h1>
             </div>
             <div class="modal-body">
-                <form class="form col-md-12 center-block" #hf="ngForm">
+                <form class="form col-md-12 center-block" #registerForm="ngForm">
                     <div class="form-group">
                         <input type="text" class="form-control input-lg" placeholder="Username" [(ngModel)]="_newUser.Username" 
-                               name="username" ngControl="username" required #username="ngForm">
+                               name="username" #username="ngModel" required>
                         <div [hidden]="username.valid || username.untouched" class="alert alert-danger">
                             Username is required
                         </div>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control input-lg" placeholder="Email" [(ngModel)]="_newUser.Email" 
-                               name="email" ngControl="email" required #email="ngForm">
+                               name="email" #email="ngModel" required>
                         <div [hidden]="email.valid || email.untouched" class="alert alert-danger">
                             Email is required
                         </div>
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control input-lg" placeholder="Password" [(ngModel)]="_newUser.Password" 
-                               name="password" ngControl="password" required #password="ngForm">
+                               name="password" #password="ngModel" required>
                         <div [hidden]="password.valid || password.untouched" class="alert alert-danger">
                             Password is required
                         </div>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-lg btn-block" (click)="register()" [disabled]="!hf.form.valid">Register</button>
+                        <button class="btn btn-primary btn-lg btn-block" (click)="register()" [disabled]="!registerForm.form.valid">Register</button>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <div class="col-md-12">
-                    <a class="btn btn-danger pull-left" [routerLink]="['/Account/Login']" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                    <a class="btn btn-danger pull-left" [routerLink]="['/account/login']" data-dismiss="modal" aria-hidden="true">Cancel</a>
                 </div>
             </div>
         </div>

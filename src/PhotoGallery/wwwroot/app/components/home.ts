@@ -2,8 +2,7 @@
 
 @Component({
     selector: 'home',
-    templateUrl: './app/components/home.html',
-    directives: []
+    templateUrl: './app/components/home.html'
 })
 export class Home {
 

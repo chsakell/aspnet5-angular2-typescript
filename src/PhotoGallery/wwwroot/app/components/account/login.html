@@ -11,37 +11,37 @@
                 </h1>
             </div>
             <div class="modal-body">
-                <form class="form col-md-12 center-block" #hf="ngForm">
+                <form class="form col-md-12 center-block" #loginForm="ngForm">
                     <div class="form-group">
                         <input type="text" class="form-control input-lg" placeholder="Username" [(ngModel)]="_user.Username"
-                               name="username" ngControl="username" required #username="ngForm" />
+                               name="username" id="username" #username="ngModel" required />
                         <div [hidden]="username.valid || username.untouched" class="alert alert-danger">
                             Username is required
                         </div>
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control input-lg" placeholder="Password" [(ngModel)]="_user.Password"
-                               name="password" ngControl="password" required #password="ngForm"/>
+                               name="password" id="password" #password="ngModel" required/>
                         <div [hidden]="password.valid || password.untouched" class="alert alert-danger">
                             Password is required
                         </div>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-lg btn-block" (click)="login()" [disabled]="!hf.form.valid">Sign In</button>
+                        <button class="btn btn-primary btn-lg btn-block" (click)="login()" [disabled]="!loginForm.form.valid">Sign In</button>
                         <span class="pull-right">
-                            <a [routerLink]="[routes.register.name]">Register</a>
+                            <a [routerLink]="['/account/register']">Register</a>
                         </span>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" [(ngModel)]="_user.RememberMe"> Remember me
+                            <input type="checkbox" [(ngModel)]="_user.RememberMe" name="remember"> Remember me
                         </label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <div class="col-md-12">
-                    <a class="btn btn-danger pull-left" [routerLink]="[routes.home.name]" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                    <a class="btn btn-danger pull-left" [routerLink]="['/home']" data-dismiss="modal" aria-hidden="true">Cancel</a>
                 </div>
             </div>
         </div>

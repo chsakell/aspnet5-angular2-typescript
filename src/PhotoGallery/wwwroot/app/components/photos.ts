@@ -1,15 +1,11 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
-import { Router, RouterLink } from '@angular/router-deprecated'
 import { Photo } from '../core/domain/photo';
 import { Paginated } from '../core/common/paginated';
 import { DataService } from '../core/services/dataService';
 
 @Component({
     selector: 'photos',
-    providers: [DataService],
-    templateUrl: './app/components/photos.html',
-    directives: [RouterLink]
+    templateUrl: './app/components/photos.html'
 })
 export class Photos extends Paginated implements OnInit {
     private _photosAPI: string = 'api/photos/';
@@ -25,15 +21,16 @@ export class Photos extends Paginated implements OnInit {
     }
 
     getPhotos(): void {
-        this.photosService.get(this._page)
+        let self = this;
+        self.photosService.get(self._page)
             .subscribe(res => {
 
                 var data: any = res.json();
 
-                this._photos = data.Items;
-                this._page = data.Page;
-                this._pagesCount = data.TotalPages;
-                this._totalCount = data.TotalCount;
+                self._photos = data.Items;
+                self._page = data.Page;
+                self._pagesCount = data.TotalPages;
+                self._totalCount = data.TotalCount;
             },
             error => console.error('Error: ' + error));
     }

@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" [routerLink]="['/Home']"><i class="fa fa-home fa-fw"></i>&nbsp;Photo Gallery</a>
+            <a class="navbar-brand" [routerLink]="['/home']"><i class="fa fa-home fa-fw"></i>&nbsp;Photo Gallery</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -16,10 +16,10 @@
                     <a href="http://wp.me/p3mRWu-11L" target="_blank"><i class="fa fa-info fa-fw"></i>&nbsp;About</a>
                 </li>
                 <li>
-                    <a [routerLink]="[routes.photos.name]"><i class="fa fa-camera fa-fw"></i>&nbsp;Photos</a>
+                    <a [routerLink]="['/photos']"><i class="fa fa-camera fa-fw"></i>&nbsp;Photos</a>
                 </li>
                 <li>
-                <li><a [routerLink]="[routes.albums.name]"><i class="fa fa-picture-o fa-fw"></i>&nbsp;Albums</a></li>
+                <li><a [routerLink]="['/albums']"><i class="fa fa-picture-o fa-fw"></i>&nbsp;Albums</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-pencil-square-o fa-fw"></i>&nbsp;Blog<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -41,10 +41,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw"></i>&nbsp;{{getUserName()}}<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li *ngIf="!isUserLoggedIn()">
-                            <a [routerLink]="['/Account/Login']"><i class="fa fa-unlock-alt fa-fw"></i>&nbsp;Sign in</a>
+                            <a [routerLink]="['/account/login']"><i class="fa fa-unlock-alt fa-fw"></i>&nbsp;Sign in</a>
                         </li>
                         <li *ngIf="isUserLoggedIn()">
-                            <a  [routerLink]="[routes.home.name]" (click)="logout()"><i class="fa fa-power-off fa-fw"></i>&nbsp;Logout</a>
+                            <a  [routerLink]="['/home']" (click)="logout()"><i class="fa fa-power-off fa-fw"></i>&nbsp;Logout</a>
                         </li>
                     </ul>
                 </li>
