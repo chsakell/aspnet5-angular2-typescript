@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import {enableProdMode} from '@angular/core';
 
 enableProdMode();
-import { MembershipService } from './core/services/membershipService';
+import { MembershipService } from './core/services/membership.service';
 import { User } from './core/domain/user';
 
 @Component({

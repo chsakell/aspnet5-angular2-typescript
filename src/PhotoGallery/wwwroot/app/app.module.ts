@@ -13,10 +13,10 @@ import { PhotosComponent } from './components/photos.component';
 import { AlbumsComponent } from './components/albums.component';
 import { routing } from './routes';
 
-import { DataService } from './core/services/dataService';
-import { MembershipService } from './core/services/membershipService';
-import { UtilityService } from './core/services/utilityService';
-import { NotificationService } from './core/services/notificationService';
+import { DataService } from './core/services/data.service';
+import { MembershipService } from './core/services/membership.service';
+import { UtilityService } from './core/services/utility.service';
+import { NotificationService } from './core/services/notification.service';
 
 class AppBaseRequestOptions extends BaseRequestOptions {
     headers: Headers = new Headers();

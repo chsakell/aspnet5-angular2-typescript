@@ -2,8 +2,8 @@
 import { Router } from '@angular/router';
 import { Registration } from '../../core/domain/registration';
 import { OperationResult } from '../../core/domain/operationResult';
-import { MembershipService } from '../../core/services/membershipService';
-import { NotificationService } from '../../core/services/notificationService';
+import { MembershipService } from '../../core/services/membership.service';
+import { NotificationService } from '../../core/services/notification.service';
 
 @Component({
     selector: 'register',

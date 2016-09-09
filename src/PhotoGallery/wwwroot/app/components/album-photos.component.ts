@@ -2,9 +2,9 @@
 import { Router, ActivatedRoute }  from '@angular/router';
 import { Photo } from '../core/domain/photo';
 import { Paginated } from '../core/common/paginated';
-import { DataService } from '../core/services/dataService';
-import { UtilityService } from '../core/services/utilityService';
-import { NotificationService } from '../core/services/notificationService';
+import { DataService } from '../core/services/data.service';
+import { UtilityService } from '../core/services/utility.service';
+import { NotificationService } from '../core/services/notification.service';
 import { OperationResult } from '../core/domain/operationResult';
 import { Subscription }  from 'rxjs/Subscription';
 

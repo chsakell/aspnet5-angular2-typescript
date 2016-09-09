@@ -1,9 +1,9 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Album } from '../core/domain/album';
 import { Paginated } from '../core/common/paginated';
-import { DataService } from '../core/services/dataService';
-import { UtilityService } from '../core/services/utilityService';
-import { NotificationService } from '../core/services/notificationService';
+import { DataService } from '../core/services/data.service';
+import { UtilityService } from '../core/services/utility.service';
+import { NotificationService } from '../core/services/notification.service';
 
 @Component({
     selector: 'albums',

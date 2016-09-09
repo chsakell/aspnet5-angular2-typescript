@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Photo } from '../core/domain/photo';
 import { Paginated } from '../core/common/paginated';
-import { DataService } from '../core/services/dataService';
+import { DataService } from '../core/services/data.service';
 
 @Component({
     selector: 'photos',
