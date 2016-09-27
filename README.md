@@ -71,7 +71,7 @@
 <li>dotnet restore</li>
 </ul>
 </li>
-<li>Application uses SQL Server so in case you want to change this, you need to alter the corresponding parts (more info <a href="https://github.com/chsakell/aspnet5-angular2-typescript/issues/3" target="_blank">here</a>).</li>
+<li>Application uses SQL Server so in case you want to run the app in Linux or MAC simply set <b>"InMemoryProvider": true</b> in <i>appsettings.json</i> and skip to the last 3 steps to run the app.</li>
 <li>Open <strong>appsettings.json</strong> file and alter the database connection string to reflect your SQL Server environment.</li>
 <li>Open a console/terminal and navigate to src/PhotoGallery where the project.json exists. Run the following commands to enable migrations and create the database:
 <ol>
