@@ -109,17 +109,7 @@ namespace PhotoGallery
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             // this will serve up wwwroot
-            app.UseFileServer();
-
-            // this will serve up node_modules
-            var provider = new PhysicalFileProvider(
-                Path.Combine(_contentRootPath, "node_modules")
-            );
-            var _fileServerOptions = new FileServerOptions();
-            _fileServerOptions.RequestPath = "/node_modules";
-            _fileServerOptions.StaticFileOptions.FileProvider = provider;
-            _fileServerOptions.EnableDirectoryBrowsing = true;
-            app.UseFileServer(_fileServerOptions);
+            app.UseStaticFiles();
 
             AutoMapperConfiguration.Configure();
 

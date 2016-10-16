@@ -63,6 +63,34 @@ gulp.task('setup-vendors', function (done) {
       'bower_components/components-font-awesome/fonts/fontawesome-webfont.woff',
       'bower_components/components-font-awesome/fonts/fontawesome-webfont.woff2',
     ]).pipe(gulp.dest(paths.fontsVendors));
+
+    gulp.src('node_modules/' + "@angular/**/*.js",
+                { base: 'node_modules/' + "@angular/" })
+                .pipe(gulp.dest(lib + "@angular/"));
+
+    gulp.src('node_modules/' + "angular2-in-memory-web-api/*.js",
+            { base: 'node_modules/' })
+            .pipe(gulp.dest(lib));
+
+    gulp.src('node_modules/' + "core-js/client/shim*.js",
+            { base: 'node_modules/' })
+            .pipe(gulp.dest(lib));
+
+     gulp.src('node_modules/' + "zone.js/dist/zone*.js",
+            { base: 'node_modules/' })
+            .pipe(gulp.dest(lib));
+
+    gulp.src('node_modules/' + "reflect-metadata/Reflect*.js",
+            { base: 'node_modules/' })
+            .pipe(gulp.dest(lib));
+
+    gulp.src('node_modules/' + "systemjs/dist/*.js",
+            { base: 'node_modules/' })
+            .pipe(gulp.dest(lib));
+
+    gulp.src('node_modules/' + "rxjs/**/*.js",
+            { base: 'node_modules/' })
+            .pipe(gulp.dest(lib));
 });
 
 gulp.task('compile-typescript', function (done) {
