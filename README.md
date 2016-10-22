@@ -128,5 +128,5 @@ If you think that any information you obtained here is worth of some money and a
 </tr>
 </tbody>
 </table>
-<h3>License</h3>
+<h2>License</h2>
 Code released under the <a href="https://github.com/chsakell/aspnet5-angular2-typescript/blob/master/licence" target="_blank"> MIT license</a>.
