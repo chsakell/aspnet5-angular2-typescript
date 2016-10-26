@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
                 public location: Location) { }
 
     ngOnInit() {
-        this.location.go('/');
+        //this.location.go('/');
     }
 
     isUserLoggedIn(): boolean {
