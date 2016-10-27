@@ -18,9 +18,7 @@ export class AppComponent implements OnInit {
     constructor(public membershipService: MembershipService,
                 public location: Location) { }
 
-    ngOnInit() {
-        //this.location.go('/');
-    }
+    ngOnInit() {   }
 
     isUserLoggedIn(): boolean {
         return this.membershipService.isUserAuthenticated();
