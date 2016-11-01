@@ -87,7 +87,8 @@
 <li>Open a browser and navigate to http://localhost:5000/</li>
 <li>You can use <i>username:</i> <strong>chsakell</strong> and <i>password:</i> <strong>photogallery</strong> to sign in or register a new user.</li>
 </ol>
-
+<h2>Microsoft Azure Deployment</h2>
+Learn how to deploy the PhotoGallery app on Microsoft Azure <a href="http://wp.me/p3mRWu-1bi" target="_blank">here</a>.
 <h2>Donations</h2>
 For being part of open source projects and documenting my work here and on <a href="https://chsakell.com">chsakell's blog</a> I really do not charge anything. I try to avoid any type of ads also.
 
