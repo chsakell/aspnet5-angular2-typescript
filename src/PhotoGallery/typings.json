@@ -3,9 +3,7 @@
         "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654"
     },
     "globalDependencies": {
-        "core-js": "registry:dt/core-js#0.0.0+20160725163759",
         "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
-        "node": "registry:dt/node#6.0.0+20160909174046",
         "body-parser": "registry:dt/body-parser#0.0.0+20160317120654",
         "compression": "registry:dt/compression#0.0.0+20160501162003",
         "cookie-parser": "registry:dt/cookie-parser#1.3.4+20160316155526",
