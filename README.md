@@ -5,8 +5,7 @@
 <h3>Frameworks - Tools - Libraries</h3>
 <ul>
 <li>ASP.NET Core</li>
-<li>ASP.NET MVC 6</li>
-<li>Entity Framework 7</li>
+<li>Entity Framework Core</li>
 <li>Automapper</li>
 <li>Angular 2</li>
 <li>Typescript</li>
