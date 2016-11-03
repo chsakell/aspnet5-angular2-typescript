@@ -30,7 +30,6 @@
     "angular-in-memory-web-api": "~0.1.13"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.45",
     "del": "2.1.0",
     "gulp": "3.9.0",
