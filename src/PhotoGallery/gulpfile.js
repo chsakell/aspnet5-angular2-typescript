@@ -97,7 +97,7 @@ gulp.task('compile-typescript', function (done) {
     var tsResult = gulp.src([
        "wwwroot/app/**/*.ts"
     ])
-     .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());
+     .pipe((tsProject()), undefined, ts.reporter.fullReporter());
     return tsResult.js.pipe(gulp.dest(paths.tsOutput));
 });
 
