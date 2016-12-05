@@ -1,23 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using PhotoGallery.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using PhotoGallery.Infrastructure.Repositories;
 using PhotoGallery.Infrastructure.Services;
 using PhotoGallery.Infrastructure.Mappings;
-using PhotoGallery.Infrastructure.Core;
 using System.Security.Claims;
-using Microsoft.AspNetCore.StaticFiles;
 using System.IO;
-using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json.Serialization;
 
 namespace PhotoGallery

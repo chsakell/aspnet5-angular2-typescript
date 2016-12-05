@@ -1,19 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Primitives;
+﻿using Microsoft.AspNetCore.Http;
 using PhotoGallery.Entities;
 using PhotoGallery.Infrastructure.Repositories;
 using PhotoGallery.Infrastructure.Services;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Principal;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Http.Authentication;
 
 namespace PhotoGallery.Infrastructure.Core
 {
