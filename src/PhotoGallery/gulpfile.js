@@ -5,8 +5,7 @@
     del = require('del'),
     path = require('path');
 
-eval("var project = " + fs.readFileSync("./project.json"));
-var lib = "./" + project.webroot + "/lib/";
+var lib = "./wwwroot/lib/";
 
 var paths = {
     npm: './node_modules/',
