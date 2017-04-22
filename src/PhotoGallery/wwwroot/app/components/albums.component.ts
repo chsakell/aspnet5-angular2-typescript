@@ -42,7 +42,7 @@ export class AlbumsComponent extends Paginated implements OnInit {
             });
     }
 
-    search(i): void {
+    search(i: any): void {
         super.search(i);
         this.getAlbums();
     };

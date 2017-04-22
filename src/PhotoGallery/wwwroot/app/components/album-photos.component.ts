@@ -64,7 +64,7 @@ export class AlbumPhotosComponent extends Paginated implements OnInit {
             () => console.log(this._photos));
     }
 
-    search(i): void {
+    search(i: any): void {
         super.search(i);
         this.getAlbumPhotos();
     };

@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         var _authenticationResult: OperationResult = new OperationResult(false, '');
 
         this.membershipService.login(this._user)
-            .subscribe(res => {
+            .subscribe((res:any) => {
                 _authenticationResult.Succeeded = res.Succeeded;
                 _authenticationResult.Message = res.Message;
             },

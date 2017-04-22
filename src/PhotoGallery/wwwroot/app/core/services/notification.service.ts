@@ -18,7 +18,7 @@ export class NotificationService {
     }
 
     printConfirmationDialog(message: string, okCallback: () => any) {
-        this._notifier.confirm(message, function (e) {
+        this._notifier.confirm(message, function (e:any) {
             if (e) {
                 okCallback();
             } else {

@@ -35,7 +35,7 @@ export class PhotosComponent extends Paginated implements OnInit {
             error => console.error('Error: ' + error));
     }
 
-    search(i): void {
+    search(i: any): void {
         super.search(i);
         this.getPhotos();
     };

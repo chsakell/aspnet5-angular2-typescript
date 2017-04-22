@@ -29,7 +29,7 @@
         return + this._page + count;
     }
 
-    search(i): void {
+    search(i: any): void {
         this._page = i;
     };
 }

@@ -1,19 +1,14 @@
 {
-    "compilerOptions": {
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "noEmitOnError": false,
-        "noImplicitAny": false,
-        "removeComments": false,
-        "sourceMap": true,
-        "target": "es5"
-    },
-    "exclude": [
-        "node_modules/**/*.d.ts",
-        "wwwroot",
-        "typings/main",
-        "typings/main.d.ts"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": ["node_modules"]
 }
