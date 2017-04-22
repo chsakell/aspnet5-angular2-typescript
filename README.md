@@ -1,4 +1,4 @@
-# ASP.NET Core, Angular 2 & TypeScript
+# ASP.NET Core, Angular 4 & TypeScript
 Blog post:<a href="http://wp.me/p3mRWu-11L" target="_blank">Cross-platform Single Page Applications using ASP.NET Core, Angular 2 and Typescript</a> <br/><br/>
 <a href="http://wp.me/p3mRWu-11L" rel="attachment wp-att-3961" target="_blank"><img src="https://chsakell.files.wordpress.com/2016/05/aspcorerc2.png?w=700&amp;h=355" alt="aspnet5-agnular2-03" width="700" height="355" class="alignnone size-full wp-image-3961"></a>
 
@@ -7,7 +7,7 @@ Blog post:<a href="http://wp.me/p3mRWu-11L" target="_blank">Cross-platform Singl
 <li>ASP.NET Core</li>
 <li>Entity Framework Core</li>
 <li>Automapper</li>
-<li>Angular 2</li>
+<li>Angular 4</li>
 <li>Typescript</li>
 <li>Bootstrap 3</li>
 <li>Gulp</li>
@@ -23,21 +23,19 @@ Blog post:<a href="http://wp.me/p3mRWu-11L" target="_blank">Cross-platform Singl
 <li>npm install -g bower</li>
 <li>npm install -g gulp</li>
 <li>npm install -g typescript</li>
-<li>npm install -g typings</li>
 <li>npm install -g tsd</li>
 </ul>
 </li>
 
-<h3>Installation instructions - Part 2 (Run application in Visual Studio 2015, only for Windows users)</h3>
+<h3>Installation instructions - Part 2 (Run application in Visual Studio 2017, only for Windows users)</h3>
 <ol>
-<li>Download and install Visual Studio 2015 from <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">here</a>.</li>
-<li>Open Visual Studio 2015 and install any update related to ASP.NET Core (check the notifications).</li>
+<li>Download and install Visual Studio 2017 from <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">here</a>.</li>
+<li>Open Visual Studio 2017 and install any update related to ASP.NET Core (check the notifications).</li>
 <li>Download the source code and open the solution.</li>
-<li>By the time you open the solution, VS 2015 will try to restore Nuget, NPM and Bower packages.</li>
+<li>By the time you open the solution, VS 2017 will try to restore Nuget, NPM and Bower packages.</li>
 <li>In case it fails to restore NPM and Bower packages, open a console and navigate at the src/PhotoGallery path where the <i>package.json</i> and <i>bower.json</i> files exist. Run the following commands:
 <ul>
 <li>npm install</li>
-<li>typings install</li>
 <li>bower install</li>
 <li>gulp build-spa</li>
 </ul>
@@ -60,7 +58,6 @@ Blog post:<a href="http://wp.me/p3mRWu-11L" target="_blank">Cross-platform Singl
 <li>Open a console/terminal and navigate at the src/PhotoGallery path where the <i>package.json</i> and <i>bower.json</i> files exist. Run the following commands:
 <ul>
 <li>npm install</li>
-<li>typings install</li>
 <li>bower install</li>
 <li>gulp build-spa</li>
 </ul>
