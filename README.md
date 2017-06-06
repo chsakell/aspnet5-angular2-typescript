@@ -1,4 +1,6 @@
 # ASP.NET Core, Angular 4 & TypeScript
+[![Build status](https://ci.appveyor.com/api/projects/status/github/chsakell/aspnet5-angular2-typescript?branch=master&svg=true)](https://ci.appveyor.com/project/chsakell/aspnet5-angular2-typescript/branch/master)
+
 Blog post:<a href="http://wp.me/p3mRWu-11L" target="_blank">Cross-platform Single Page Applications using ASP.NET Core, Angular 2 and Typescript</a> <br/><br/>
 <a href="http://wp.me/p3mRWu-11L" rel="attachment wp-att-3961" target="_blank"><img src="https://chsakell.files.wordpress.com/2016/05/aspcorerc2.png?w=700&amp;h=355" alt="aspnet5-agnular2-03" width="700" height="355" class="alignnone size-full wp-image-3961"></a>
 
