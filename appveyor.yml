@@ -3,11 +3,19 @@
     only:
       - master
   image: Visual Studio 2017
-
+  # Test against the latest version of this Node.js version
   environment:
+    nodejs_version: "6"
     DOTNET_CLI_TELEMETRY_OPTOUT: true
     DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
- 
+
+# Install scripts. (runs after repo cloning)
+  install:
+    # Get the latest stable version of Node.js or io.js
+    - ps: Install-Product node $env:nodejs_version
+    # install modules
+    - npm install
+  
   version: 1.0.{build}
   configuration: Release
   platform: Any CPU
