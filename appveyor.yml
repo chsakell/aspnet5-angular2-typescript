@@ -13,6 +13,7 @@
   install:
     # Get the latest stable version of Node.js or io.js
     - ps: Install-Product node $env:nodejs_version
+    - ps: cd "src/PhotoGallery"
     # install modules
     - npm install
   
