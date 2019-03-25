@@ -14,13 +14,11 @@
     "@angular/platform-browser": "4.0.2",
     "@angular/platform-browser-dynamic": "4.0.2",
     "@angular/router": "4.0.2",
-
     "body-parser": "1.14.1",
     "bootstrap": "3.3.5",
     "es6-shim": "^0.35.0",
     "fancybox": "3.0.0",
     "jquery": "2.1.4",
-
     "angular-in-memory-web-api": "~0.2.4",
     "systemjs": "0.19.40",
     "core-js": "^2.4.1",
