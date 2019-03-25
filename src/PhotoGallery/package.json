@@ -22,7 +22,7 @@
     "angular-in-memory-web-api": "~0.2.4",
     "systemjs": "0.19.40",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.1",
+    "rxjs": "5.4.2",
     "zone.js": "^0.8.5",
     "reflect-metadata": "^0.1.8"
   },
@@ -33,6 +33,6 @@
     "gulp-typescript": "^3.1.6",
     "gulp-watch": "4.3.11",
     "merge": "1.2.0",
-    "typescript": "^2.2.2"
+    "typescript": "2.4.0"
   }
 }
